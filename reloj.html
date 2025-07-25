@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reloj Multizona</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e2f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #digital {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      display: none; /* Oculto por defecto */
+    }
+
+    .analog-clock {
+      width: 300px;
+      height: 300px;
+      border: 10px solid #fff;
+      border-radius: 50%;
+      position: relative;
+      background: #222;
+      display: block; /* Mostrado por defecto */
+    }
+
+    .hand {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: translateX(-50%) rotate(0deg);
+    }
+
+    .hour-hand {
+      width: 6px;
+      height: 70px;
+      background: red;
+      z-index: 3;
+    }
+
+    .minute-hand {
+      width: 4px;
+      height: 100px;
+      background: white;
+      z-index: 2;
+    }
+
+    .second-hand {
+      width: 2px;
+      height: 130px;
+      background: orange;
+      z-index: 1;
+    }
+
+    .center-dot {
+      width: 10px;
+      height: 10px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+    }
+
+    #toggle-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #zona-horaria {
+      margin-bottom: 20px;
+      padding: 8px 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Selector de zona horaria -->
+  <select id="zona-horaria">
+    <option value="Europe/Madrid">Madrid (CET)</option>
+    <option value="America/New_York">New York (EST)</option>
+    <option value="America/Argentina/Buenos_Aires">Buenos Aires (ART)</option>
+    <option value="Asia/Tokyo">Tokyo (JST)</option>
+    <option value="UTC">UTC</option>
+  </select>
+
+  <div id="digital">12:00:00 AM</div>
+
+  <div class="analog-clock" id="analog-clock">
+    <div class="hand hour-hand" id="hour-hand"></div>
+    <div class="hand minute-hand" id="minute-hand"></div>
+    <div class="hand second-hand" id="second-hand"></div>
+    <div class="center-dot"></div>
+  </div>
+
+  <button id="toggle-btn" onclick="toggleReloj()">Cambiar a Reloj Digital</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script> 
+  <script src="reloj.js"></script>
+</body>
+</html>
