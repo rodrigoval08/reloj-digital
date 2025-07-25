@@ -15,7 +15,7 @@ Colección de proyectos del curso de desarrollo web para practicar y mejorar hab
 
 | # | Proyecto | Demo | Código |
 |---|----------|------|--------|
-| 01 | Reloj Digital | [Ver Demo](https://aquamarine-tarsier-e101c6.netlify.app/) | [Ver Código](https://github.com/rodrigoval08/relojdigital/tree/main/reloj-digital) |
+| 01 | Reloj Digital | [Ver Demo](https://aquamarine-tarsier-e101c6.netlify.app/) | [Ver Código](https://github.com/rodrigoval08/reloj-digital/tree/main/reloj-digital) |
 | 02 | Calculadora PWA | [Ver Demo](#) | [Ver Código](https://github.com/rodrigoval08/calculadorapwa/tree/main/calculadora-pwa) |
 
 ## 🚀 Despliegue
